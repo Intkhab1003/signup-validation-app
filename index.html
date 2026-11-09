@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium SaaS Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <main class="container">
+        <section class="info-section">
+            <h1 class="headline">Unlock Your<br><span class="text-gradient">Digital Potential</span></h1>
+            <p class="description">Join thousands of forward-thinking creators and developers building the next generation of web experiences.</p>
+            
+            <ul class="feature-list">
+                <li>
+                    <div class="icon-box"><ion-icon name="rocket-outline"></ion-icon></div>
+                    <span>Seamless Integration & Lightning Fast</span>
+                </li>
+                <li>
+                    <div class="icon-box"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
+                    <span>Enterprise-Grade Security Standards</span>
+                </li>
+                <li>
+                    <div class="icon-box"><ion-icon name="color-palette-outline"></ion-icon></div>
+                    <span>Stunning Premium UI/UX Design</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="form-section">
+            <div class="glass-card" id="tilt-card">
+                
+                <!-- Form State -->
+                <form id="signup-form" novalidate>
+                    <h2 class="form-title">Create Account</h2>
+                    <p class="form-subtitle">Start your 14-day free trial. No credit card required.</p>
+
+                    <div class="input-group">
+                        <input type="text" id="fullname" name="fullname" placeholder=" " required aria-describedby="name-error">
+                        <label for="fullname">Full Name</label>
+                        <ion-icon name="person-outline" class="input-icon"></ion-icon>
+                        <span class="error-message" id="name-error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder=" " required aria-describedby="email-error">
+                        <label for="email">Email Address</label>
+                        <ion-icon name="mail-outline" class="input-icon"></ion-icon>
+                        <span class="error-message" id="email-error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder=" " required aria-describedby="password-error">
+                        <label for="password">Password</label>
+                        <ion-icon name="lock-closed-outline" class="input-icon"></ion-icon>
+                        <button type="button" class="toggle-password" id="toggle-password" aria-label="Toggle password visibility">
+                            <ion-icon name="eye-outline" id="eye-icon"></ion-icon>
+                        </button>
+                        <span class="error-message" id="password-error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="password-strength" id="strength-container">
+                        <div class="strength-bars">
+                            <div class="bar" id="bar-1"></div>
+                            <div class="bar" id="bar-2"></div>
+                            <div class="bar" id="bar-3"></div>
+                            <div class="bar" id="bar-4"></div>
+                        </div>
+                        <span class="strength-text" id="strength-text">Password Strength</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span class="btn-text">Sign Up Now</span>
+                        <div class="loader"></div>
+                    </button>
+                    
+                    <p class="login-link">Already have an account? <a href="#">Sign In</a></p>
+                </form>
+
+                <!-- Success State (Hidden by default) -->
+                <div class="success-state" id="success-state" style="display: none;">
+                    <div class="success-icon">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <h2>Validation Complete!</h2>
+                    <p>Your information has been successfully validated. (Frontend Only)</p>
+                    <button type="button" class="submit-btn reset-btn" id="reset-btn">Test Another Entry</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
